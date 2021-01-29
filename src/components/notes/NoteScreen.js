@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { activeNote, startDeleting } from '../../../actions/notes';
-import { useForm } from '../../../hooks/useForm';
-import { NoteAppBar } from './NoteAppBar';
+import { activeNote, startDeleting } from '../../actions/notes';
+import { useForm } from '../../hooks/useForm';
+import { NotesAppBar } from './NotesAppBar';
+
 
 export const NoteScreen = () => {
 
@@ -32,7 +33,7 @@ export const NoteScreen = () => {
 
     return (
         <div className="notes__main-content">
-            <NoteAppBar />
+            <NotesAppBar />
 
             <div className="notes__content">
 
