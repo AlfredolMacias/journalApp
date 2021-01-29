@@ -8,13 +8,14 @@ export const startNewNotes = () => {
     return async( dispatch, getState ) => {
 
         const { uid } = getState().auth;
-
+        
         const newNote = {
             title : '',
             body: '',
             date: new Date().getTime()
         }
 
+        console.log('uid  - ' + uid); 
        const doc = await  db.collection(`${ uid }/journal/notes`).add( newNote );
 
        dispatch ( activeNote( doc.id, newNote ));
